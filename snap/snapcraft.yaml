@@ -1,0 +1,32 @@
+name: clock-signal
+version: '20.7.11'
+summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
+description: |
+  A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
+  early Macintosh, Atari 2600 and ST, ColecoVision, Commodore Vic-20,
+  MSX 1, Oric 1/Atmos, Sega Master System and Sinclair ZX80/81.
+
+grade: devel
+confinement: strict
+base: core18
+
+#apps:
+#  clock-signal:
+#    command: desktop-launch $SNAP/usr/bin/clock-signal
+#    desktop: usr/share/applications/clock-signal.desktop
+#    plugs: [x11,opengl]
+
+parts:
+  clock-signal:
+    source: https://github.com/TomHarte/CLK/archive/master.zip
+    plugin: qmake
+    qt-version: qt5
+    project-files: [CLK-master/OSBindings/Qt/ClockSignal.pro]
+    build-packages:
+      - g++
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5widgets5
+    stage-packages:
+      - libqt5gui5
+
