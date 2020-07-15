@@ -8,7 +8,7 @@ description: |
 
 grade: devel
 confinement: strict
-base: core18
+base: core20
 
 #apps:
 #  clock-signal:
@@ -23,7 +23,7 @@ parts:
     qt-version: qt5
     project-files: [CLK-master/OSBindings/Qt/ClockSignal.pro]
     build-packages:
-      - g++-8
+      - g++
       - libqt5core5a
       - libqt5gui5
       - qtmultimedia5-dev
