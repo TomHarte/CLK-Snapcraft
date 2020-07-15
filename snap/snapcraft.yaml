@@ -27,6 +27,8 @@ parts:
       - libqt5core5a
       - libqt5gui5
       - libqt5widgets5
+      - libqt5multimedia5
     stage-packages:
       - libqt5gui5
-
+      - libqt5widgets5
+      - libqt5multimedia5
