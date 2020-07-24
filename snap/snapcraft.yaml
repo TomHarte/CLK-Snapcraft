@@ -10,11 +10,11 @@ grade: devel
 confinement: strict
 base: core18
 
-#apps:
-#  clock-signal:
-#    command: desktop-launch $SNAP/usr/bin/clock-signal
-#    desktop: usr/share/applications/clock-signal.desktop
-#    plugs: [x11,opengl]
+apps:
+  clock-signal:
+    command: desktop-launch $SNAP/usr/bin/clock-signal
+    desktop: usr/share/applications/clock-signal.desktop
+    plugs: [x11, opengl, desktop]
 
 parts:
   clock-signal:
