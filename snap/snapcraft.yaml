@@ -14,6 +14,9 @@ apps:
   clock-signal:
     command: bin/desktop-launch $SNAP/opt/ClockSignal/bin/ClockSignal
     plugs: [x11, opengl, desktop]
+#     environment:
+#       # Use GTK3 cursor theme, icon theme and open/save file dialogs.
+#       QT_QPA_PLATFORMTHEME: gtk3
 
 parts:
   clock-signal:
@@ -59,24 +62,24 @@ parts:
       - fcitx-frontend-qt5
       - libgtk2.0-0
 
-  qt5-gtk-platform:
-    plugin: nil
-    stage-packages:
-      - qt5-gtk-platformtheme
+#   qt5-gtk-platform:
+#     plugin: nil
+#     stage-packages:
+#       - qt5-gtk-platformtheme
 
-plugs:
-  # Support for common GTK themes
-  # https://forum.snapcraft.io/t/how-to-use-the-system-gtk-theme-via-the-gtk-common-themes-snap/6235
-  gsettings:
-  gtk-3-themes:
-    interface: content
-    target: $SNAP/data-dir/themes
-    default-provider: gtk-common-themes
-  icon-themes:
-    interface: content
-    target: $SNAP/data-dir/icons
-    default-provider: gtk-common-themes
-  sound-themes:
-    interface: content
-    target: $SNAP/data-dir/sounds
-    default-provider: gtk-common-themes
+# plugs:
+#   # Support for common GTK themes
+#   # https://forum.snapcraft.io/t/how-to-use-the-system-gtk-theme-via-the-gtk-common-themes-snap/6235
+#   gsettings:
+#   gtk-3-themes:
+#     interface: content
+#     target: $SNAP/data-dir/themes
+#     default-provider: gtk-common-themes
+#   icon-themes:
+#     interface: content
+#     target: $SNAP/data-dir/icons
+#     default-provider: gtk-common-themes
+#   sound-themes:
+#     interface: content
+#     target: $SNAP/data-dir/sounds
+#     default-provider: gtk-common-themes
