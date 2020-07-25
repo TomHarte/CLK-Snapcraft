@@ -12,7 +12,7 @@ base: core18
 
 apps:
   clock-signal:
-    command: bin/desktop-launch clock-signal
+    command: bin/desktop-launch $SNAP/opt/ClockSignal/bin/ClockSignal
     plugs: [x11, opengl, desktop]
 
 parts:
@@ -29,6 +29,7 @@ parts:
       - libqt5gui5
       - libqt5widgets5
       - libqt5multimedia5
+    after: [desktop-qt5]
 
 # From here downward is as advocated by https://forum.snapcraft.io/t/desktop-app-support-qt5/11703
 
