@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Clock Signal
+Exec=clock-signal
+Icon=${SNAP}/meta/gui/clock-signal.png
+Type=Application
