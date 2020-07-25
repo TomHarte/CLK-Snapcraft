@@ -7,7 +7,7 @@ description: |
   MSX 1, Oric 1/Atmos, Sega Master System and Sinclair ZX80/81.
 
 grade: devel
-confinement: strict
+confinement: devmode
 base: core18
 
 apps:
