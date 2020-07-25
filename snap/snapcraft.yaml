@@ -63,16 +63,19 @@ parts:
     stage-packages:
       - qt5-gtk-platformtheme
 
-plugs: # plugs for theming, font settings, cursor and to use gtk3 file chooser
+plugs:
+  # Support for common GTK themes
+  # https://forum.snapcraft.io/t/how-to-use-the-system-gtk-theme-via-the-gtk-common-themes-snap/6235
+  gsettings:
   gtk-3-themes:
     interface: content
     target: $SNAP/data-dir/themes
-    default-provider: gtk-common-themes:gtk-3-themes
+    default-provider: gtk-common-themes
   icon-themes:
     interface: content
     target: $SNAP/data-dir/icons
-    default-provider: gtk-common-themes:icon-themes
+    default-provider: gtk-common-themes
   sound-themes:
     interface: content
     target: $SNAP/data-dir/sounds
-    default-provider: gtk-common-themes:sounds-themes
+    default-provider: gtk-common-themes
