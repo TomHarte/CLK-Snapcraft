@@ -13,7 +13,7 @@ base: core18
 apps:
   clock-signal:
     command: bin/desktop-launch $SNAP/opt/ClockSignal/bin/ClockSignal
-    plugs: [x11, opengl, desktop, desktop-legacy, wayland, unity7, audio-playback, home]
+    plugs: [x11, opengl, desktop, desktop-legacy, wayland, unity7, audio-playback, home, pulseaudio]
 #     environment:
 #       # Use GTK3 cursor theme, icon theme and open/save file dialogs.
 #       QT_QPA_PLATFORMTHEME: gtk3
