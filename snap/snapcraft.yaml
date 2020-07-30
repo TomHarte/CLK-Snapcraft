@@ -32,6 +32,7 @@ parts:
       - libqt5gui5
       - libqt5widgets5
       - libqt5multimedia5
+      - libqt5multimedia5-plugins
     after: [desktop-qt5]
 
 # From here downward is as advocated by https://forum.snapcraft.io/t/desktop-app-support-qt5/11703
