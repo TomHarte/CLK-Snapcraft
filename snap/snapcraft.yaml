@@ -1,5 +1,5 @@
 name: clock-signal
-version: '21.04.21'
+version: '21.05.05'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
@@ -28,6 +28,7 @@ parts:
       - libqt5core5a
       - libqt5gui5
       - qtmultimedia5-dev
+      - qt5x11extras5-dev
     stage-packages:
       - libqt5gui5
       - libqt5widgets5
@@ -55,6 +56,7 @@ parts:
       - gnome-themes-standard
       - shared-mime-info
       - libqt5gui5
+      - libqt5x11extras
       - libgdk-pixbuf2.0-0
       - libqt5svg5 # for loading icon themes which are svg
       - try: [appmenu-qt5] # not available on core18
