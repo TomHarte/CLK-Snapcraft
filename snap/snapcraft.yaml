@@ -1,5 +1,5 @@
 name: clock-signal
-version: '21.07.16'
+version: '21.08.09'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
