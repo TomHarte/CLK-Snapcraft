@@ -1,5 +1,5 @@
 name: clock-signal
-version: '22.04.17'
+version: '22.07.01'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
@@ -36,6 +36,8 @@ parts:
       - libqt5multimedia5
       - libqt5multimedia5-plugins
       - libqt5x11extras5
+      - libqt5opengl
+      - libglu1-mesa
     after: [desktop-qt5]
 
 # From here downward is as advocated by https://forum.snapcraft.io/t/desktop-app-support-qt5/11703
