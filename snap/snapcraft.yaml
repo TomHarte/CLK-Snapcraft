@@ -1,10 +1,10 @@
 name: clock-signal
-version: '22.11.25'
+version: '23.05.08'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
   early Macintosh, Atari 2600 and ST, ColecoVision, Commodore Vic-20 and Amiga,
-  Enterprise 64/128, MSX 1, Oric 1/Atmos, Sega Master System, Sinclair ZX80/81
+  Enterprise 64/128, MSX 1/2, Oric 1/Atmos, Sega Master System, Sinclair ZX80/81
   and ZX Spectrum.
 
 grade: stable
