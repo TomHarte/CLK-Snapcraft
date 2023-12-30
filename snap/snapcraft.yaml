@@ -2,7 +2,7 @@ name: clock-signal
 version: '23.12.28'
 grade: stable
 confinement: strict
-base: core22
+base: core20
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
