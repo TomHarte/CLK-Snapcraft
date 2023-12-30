@@ -68,8 +68,8 @@ parts:
       - xdg-user-dirs
       - fcitx-frontend-qt6
 
-   qt6-gtk-platform:
-     plugin: nil
-     stage-packages:
-       - qt6-gtk-platformtheme
+  qt6-gtk-platform:
+    plugin: nil
+    stage-packages:
+      - qt6-gtk-platformtheme
 
