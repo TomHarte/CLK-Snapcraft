@@ -2,7 +2,7 @@ name: clock-signal
 version: '23.12.28'
 grade: stable
 confinement: strict
-base: core22
+base: core18
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
@@ -23,3 +23,10 @@ parts:
     plugin: qmake
     qt-version: qt5
     project-files: [CLK-master/OSBindings/Qt/clksignal.pro]
+    build-packages:
+      - qtmultimedia5-dev
+      - libqt5x11extras5-dev
+    stage-packages:
+      - libqt5multimedia5
+      - libqt5multimedia5-plugins
+      - libqt5x11extras5
