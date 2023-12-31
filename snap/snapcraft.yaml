@@ -15,7 +15,7 @@ apps:
     command: bin/desktop-launch $SNAP/opt/clksignal/bin/clksignal
     extensions:
       - kde-neon
-    plugs: [opengl, unity7, audio-playback, home, pulseaudio]
+    plugs: [opengl, home, pulseaudio]
 
 parts:
   clock-signal:
@@ -23,18 +23,3 @@ parts:
     plugin: qmake
     qt-version: qt5
     project-files: [CLK-master/OSBindings/Qt/clksignal.pro]
-    build-packages:
-      - qt5-base-dev
-      - libqt5gui5
-      - qtmultimedia5-dev
-      - libqt5x11extras5-dev
-      - libqt5opengl5-dev
-      - portaudio19-dev
-    stage-packages:
-      - libqt5gui5
-      - libqt5widgets5
-      - libqt5multimedia5
-      - libqt5multimedia5-plugins
-      - libqt5x11extras5
-      - libqt5opengl5
-      - libglu1-mesa
