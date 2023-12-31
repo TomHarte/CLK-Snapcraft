@@ -2,7 +2,7 @@ name: clock-signal
 version: '23.12.28'
 grade: stable
 confinement: strict
-base: core20
+base: core18
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
@@ -13,62 +13,28 @@ description: |
 apps:
   clock-signal:
     command: bin/desktop-launch $SNAP/opt/clksignal/bin/clksignal
-    environment:
-        DISABLE_WAYLAND: 1
-    plugs: [x11, opengl, desktop, desktop-legacy, unity7, audio-playback, home, pulseaudio]
+    extensions:
+      - kde-neon
+    plugs: [opengl, unity7, audio-playback, home, pulseaudio]
 
 parts:
   clock-signal:
     source: https://github.com/TomHarte/CLK/archive/master.zip
     plugin: qmake
-    qt-version: qt6
+    qt-version: qt5
     project-files: [CLK-master/OSBindings/Qt/clksignal.pro]
     build-packages:
-      - qt6-base-dev
-      - libqt6gui6
-      - qtmultimedia6-dev
-      - libqt6x11extras6-dev
-      - libqt6opengl6-dev
+      - qt5-base-dev
+      - libqt5gui5
+      - qtmultimedia5-dev
+      - libqt5x11extras5-dev
+      - libqt5opengl5-dev
       - portaudio19-dev
     stage-packages:
-      - libqt6gui6
-      - libqt6widgets6
-      - libqt6multimedia6
-      - libqt6multimedia6-plugins
-      - libqt6x11extras6
-      - libqt6opengl6
+      - libqt5gui5
+      - libqt5widgets5
+      - libqt5multimedia5
+      - libqt5multimedia5-plugins
+      - libqt5x11extras5
+      - libqt5opengl5
       - libglu1-mesa
-    after: [desktop-qt6]
-
-  desktop-qt6:
-    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
-    source-subdir: qt
-    plugin: make
-    make-parameters: ["FLAVOR=qt6"]
-    build-packages:
-      - build-essential
-      - qtbase6-dev
-      - dpkg-dev
-    stage-packages:
-      - libxkbcommon0
-      - ttf-ubuntu-font-family
-      - dmz-cursor-theme
-      - light-themes
-      - adwaita-icon-theme
-      - gnome-themes-standard
-      - shared-mime-info
-      - libqt6gui6
-      - libqt6x11extras6
-      - libqt6opengl6
-      - libgdk-pixbuf2.0-0
-      - libqt6svg6 # for loading icon themes which are svg
-      - appmenu-qt6
-      - locales-all
-      - xdg-user-dirs
-      - fcitx-frontend-qt6
-
-  qt6-gtk-platform:
-    plugin: nil
-    stage-packages:
-      - qt6-gtk-platformtheme
-
