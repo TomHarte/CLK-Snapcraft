@@ -1,8 +1,8 @@
 name: clock-signal
-version: '23.12.28'
-grade: stable
 confinement: strict
-base: core18
+grade: stable
+base: core22
+version: '25.12.10'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, Amstrad CPC, Apple II/II+/IIe and
@@ -14,19 +14,21 @@ apps:
   clock-signal:
     command: bin/desktop-launch $SNAP/opt/clksignal/bin/clksignal
     extensions:
-      - kde-neon
+      - kde-neon-6
     plugs: [opengl, home, pulseaudio]
 
 parts:
   clock-signal:
     source: https://github.com/TomHarte/CLK/archive/master.zip
-    plugin: qmake
-    qt-version: qt5
-    project-files: [CLK-master/OSBindings/Qt/clksignal.pro]
+    plugin: cmake
+    cmake-parameters:
+      - -DCLK_UI=Qt
+      - -DCMAKE_BUILD_TYPE=Release
     build-packages:
-      - qtmultimedia5-dev
-      - libqt5x11extras5-dev
+      - qt6-base-dev
+      - libqt6opengl6-dev
     stage-packages:
-      - libqt5multimedia5
-      - libqt5multimedia5-plugins
-      - libqt5x11extras5
+      - libqt6core6
+      - libqt6gui6
+      - libqt6widgets6
+      - libqt6openglwidgets6
