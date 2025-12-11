@@ -29,6 +29,7 @@ parts:
     build-packages:
       - qt6-base-dev
       - libqt6opengl6-dev
+      - zlib1g-dev
     stage-packages:
       - libqt6core6
       - libqt6gui6
