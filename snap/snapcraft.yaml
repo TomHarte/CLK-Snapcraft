@@ -19,7 +19,9 @@ apps:
 
 parts:
   clock-signal:
-    source: https://github.com/TomHarte/CLK/archive/master.zip
+    source: https://github.com/TomHarte/CLK.git
+    source-type: git
+    source-branch: master    
     plugin: cmake
     cmake-parameters:
       - -DCLK_UI=Qt
