@@ -10,6 +10,12 @@ description: |
   Enterprise 64/128, MSX 1/2, Oric 1/Atmos, early PC compatibles, Sega Master
   System, Sinclair ZX80/81 and ZX Spectrum.
 
+# kf6-core22-sdk appears to exist only for amd64 and arm64; this platform restriction
+# is implied by this project's dependencies.
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+
 apps:
   clock-signal:
     command: bin/desktop-launch $SNAP/opt/clksignal/bin/clksignal
