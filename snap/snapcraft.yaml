@@ -41,3 +41,5 @@ parts:
       - libqt6gui6
       - libqt6widgets6
       - libqt6openglwidgets6
+      - libpulse0
+
