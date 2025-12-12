@@ -18,7 +18,7 @@ architectures:
 
 apps:
   clock-signal:
-    command: bin/desktop-launch $SNAP/opt/clksignal/bin/clksignal
+    command: usr/bin/clksignal
     extensions:
       - kde-neon-6
     plugs: [opengl, home, pulseaudio]
