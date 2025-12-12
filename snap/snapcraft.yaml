@@ -36,6 +36,7 @@ parts:
       - qt6-base-dev
       - libqt6opengl6-dev
       - zlib1g-dev
+      - libpulse-dev
     stage-packages:
       - libqt6core6
       - libqt6gui6
