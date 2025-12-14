@@ -1,7 +1,7 @@
 name: clock-signal
 confinement: strict
 grade: stable
-base: core22
+base: core24
 version: '25.12.12'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
@@ -42,6 +42,6 @@ parts:
 #      - libqt6gui6
 #      - libqt6widgets6
       - libqt6openglwidgets6
-#      - libqt6multimedia6
+      - libqt6multimedia6
       - libpulse0
 
