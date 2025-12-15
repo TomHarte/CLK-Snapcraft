@@ -1,7 +1,7 @@
 name: clock-signal
 confinement: strict
 grade: stable
-base: core24
+base: core22
 version: '25.12.12'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
@@ -33,8 +33,8 @@ parts:
       - -DCLK_UI=Qt
       - -DCMAKE_BUILD_TYPE=Release
     build-packages:
-      - qt6-base-dev
-      - libqt6opengl6-dev
+#      - qt6-base-dev
+#      - libqt6opengl6-dev
       - zlib1g-dev
       - libpulse-dev
     stage-packages:
