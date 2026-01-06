@@ -2,7 +2,7 @@ name: clock-signal
 confinement: strict
 grade: stable
 base: core24
-version: '2025-01-06'
+version: '2026-01-06'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, BBC Micro and Archimedes, Amstrad CPC,
