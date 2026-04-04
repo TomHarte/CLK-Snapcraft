@@ -2,13 +2,14 @@ name: clock-signal
 confinement: strict
 grade: stable
 base: core24
-version: '2026-02-23'
+version: '2026-04-04'
 summary: A Qt-based emulator of various 8- and 16-bit computers and consoles.
 description: |
   A Qt-based emulator of the Acorn Electron, BBC Micro and Archimedes, Amstrad CPC,
   Apple II/II+/IIe, early Apple Macintosh, Atari 2600, Atari ST, ColecoVision,
   Commodore Vic-20, Plus 4 and Amiga, Enterprise 64/128, MSX 1/2, Oric 1/Atmos,
-  early PC compatibles, Sega Master System, Sinclair ZX80/ZX81 and ZX Spectrum.
+  early PC compatibles, Sega Master System, Thomson MO5, Sinclair ZX80/ZX81 and
+  ZX Spectrum.
 
 # kf6-core24-sdk appears to exist only for amd64 and arm64; this platform restriction
 # is implied by this project's dependencies.
