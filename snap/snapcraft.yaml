@@ -8,8 +8,8 @@ description: |
   A Qt-based emulator of the Acorn Electron, BBC Micro and Archimedes, Amstrad CPC,
   Apple II/II+/IIe, early Apple Macintosh, Atari 2600, Atari ST, ColecoVision,
   Commodore Vic-20, Plus 4 and Amiga, Enterprise 64/128, MSX 1/2, Oric 1/Atmos,
-  early PC compatibles, Sega Master System, Thomson MO5/6, Sinclair ZX80/ZX81 and
-  ZX Spectrum.
+  early PC compatibles, Sega Master System, Sinclair ZX80/ZX81 and
+  ZX Spectrum, Tandy CoCo 1/2 and Thomson MO5/6.
 
 # kf6-core24-sdk appears to exist only for amd64 and arm64; this platform restriction
 # is implied by this project's dependencies.
